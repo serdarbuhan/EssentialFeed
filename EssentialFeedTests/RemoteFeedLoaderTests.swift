@@ -9,21 +9,29 @@ import XCTest
 
 class RemoteFeedLoader {
     func load() {
-        HTTPClient.shared.requestedURL = URL(string: "http://a-url.com")
+        HTTPClient.shared.get(from: URL(string: "http://a-url.com")!)
     }
 }
 
 class HTTPClient {
-    static let shared = HTTPClient()
-    private init() { }
+    static var shared = HTTPClient() // Global state. allows this to be changed in tests
 
+    func get(from url: URL) {}
+}
+
+class HTTPClientSpy: HTTPClient {
     var requestedURL: URL?
+
+    override func get(from url: URL) {   // Move the test logic from the RemoteFeedLoader to HTTPClientSpy
+        requestedURL = url
+    }
 }
 
 final class RemoteFeedLoaderTests: XCTestCase {
 
     func test_init_doesNotRequestDataFromURL() {
-        let client = HTTPClient.shared
+        let client = HTTPClientSpy()
+        HTTPClient.shared = client
         _ = RemoteFeedLoader()
 
         XCTAssertNil(client.requestedURL)
@@ -32,19 +40,13 @@ final class RemoteFeedLoaderTests: XCTestCase {
     /*
      RemoteFeedLoadeer needs to use HTTPClient to invoke the network request
 
-        RemoteFeedLoader(client: HTTPClient())  initializer/constructor injection
-
-        let remoteFeedLoader = RemoteFeedLoader()
-        remoteFeedLoader.client = HTTPClient()  // property injection
-
-        remoteFeedLoader.load(client) // method injection
-
-        We'll go with singleton instead of these for now.
+        Doing it with a global state now. Not a singleton anymore
      */
 
     func test_load_requestDataFromURL() {
         // Arrange
-        let client = HTTPClient.shared
+        let client = HTTPClientSpy()
+        HTTPClient.shared = client
         let sut = RemoteFeedLoader()
 
         // Act
