@@ -8,10 +8,10 @@
 import XCTest
 
 class RemoteFeedLoader {
-    let url: URL    // user of RemoteFeedLoader needs to know this url. Not the remote feed loader. It should be able to load from any url.
+    let url: URL
     let client: HTTPClient
 
-    init(url: URL, client: HTTPClient) { // generic. production code is clean
+    init(url: URL, client: HTTPClient) {
         self.url = url
         self.client = client
     }
@@ -25,32 +25,37 @@ protocol HTTPClient {
     func get(from url: URL)
 }
 
-class HTTPClientSpy: HTTPClient {
-    var requestedURL: URL?
-
-    // No need to override anymore
-    func get(from url: URL) {
-        requestedURL = url
-    }
-}
-
 final class RemoteFeedLoaderTests: XCTestCase {
 
     func test_init_doesNotRequestDataFromURL() {
-        let url = URL(string: "http://a-url.com")!
-        let client = HTTPClientSpy()
-        _ = RemoteFeedLoader(url: url, client: client)
+        let (_, client) = makeSUT()
 
         XCTAssertNil(client.requestedURL)
     }
 
     func test_load_requestDataFromURL() {
-        let url = URL(string: "https://a-given-url.com")! // test case urls and logic is completely on the test side
-        let client = HTTPClientSpy()
-        let sut = RemoteFeedLoader(url: url, client: client)
+        let url = URL(string: "https://a-given-url.com")!
+        let (sut, client) = makeSUT(url: url)
 
         sut.load()
 
         XCTAssertEqual(client.requestedURL, url)
+    }
+
+    // Removes the code duplication on test cases
+
+    // MARK: - Helpers
+    private func makeSUT(url: URL = URL(string: "http://a-url.com")!) -> (sut: RemoteFeedLoader, client: HTTPClientSpy) {
+        let client = HTTPClientSpy()
+        let sut = RemoteFeedLoader(url: url, client: client)
+        return (sut, client)
+    }
+
+    private class HTTPClientSpy: HTTPClient {
+        var requestedURL: URL?
+
+        func get(from url: URL) {
+            requestedURL = url
+        }
     }
 }
