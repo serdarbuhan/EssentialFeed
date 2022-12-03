@@ -7,25 +7,28 @@
 
 import Foundation
 
-// other modules(test) can conform to this protocol
 public protocol HTTPClient {
-    func get(from url: URL)
+    // Client passes an error to the caller. RemoteFeedLoader in this case
+    func get(from url: URL, completion: @escaping (Error) -> Void)
 }
-
-// don't want other modules to subclass for now that's why final
-// we want other modules to access this class, initializer and load method
-// rest is private
 
 public final class RemoteFeedLoader {
     private let url: URL
     private let client: HTTPClient
+
+    // RemoteFeedLoader's domain error.
+    public enum Error: Swift.Error {
+        case connectivity // maps client errors to connectivity error.
+    }
 
     public init(url: URL, client: HTTPClient) {
         self.url = url
         self.client = client
     }
 
-    public func load() {
-        client.get(from: url)
+    public func load(completion: @escaping (Error) -> Void = { _ in }) {
+        client.get(from: url) { error in
+            completion(.connectivity)
+        }
     }
 }

@@ -31,9 +31,22 @@ final class RemoteFeedLoaderTests: XCTestCase {
 
         sut.load()
         sut.load()
-        // accumulate all the requested URLs.
-        // then when you compate two arrays, you compare order, quality and count at the same time.
+
         XCTAssertEqual(client.requestedURLs, [url, url])
+    }
+
+    func test_load_deliversErrorOnClientError() {
+        let (sut, client) = makeSUT()
+
+        // act make the client fail
+        client.error = NSError(domain: "test", code: 0)
+
+        // capture the received error
+        var capturedError: RemoteFeedLoader.Error?
+        sut.load { error in capturedError = error }
+
+        // assert
+        XCTAssertEqual(capturedError, .connectivity)
     }
 
     // MARK: - Helpers
@@ -45,8 +58,13 @@ final class RemoteFeedLoaderTests: XCTestCase {
 
     private class HTTPClientSpy: HTTPClient {
         var requestedURLs = [URL]()
+        var error: Error?
 
-        func get(from url: URL) {
+        func get(from url: URL, completion: @escaping (Error) -> Void) {
+
+            if let error = error {
+                completion(error)
+            }
             requestedURLs.append(url)
         }
     }
