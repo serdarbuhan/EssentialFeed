@@ -7,11 +7,8 @@
 
 import Foundation
 
-// Removes the optionals (Error?, HTTPURLResponse?)
-// Only one of two can happen.
-// if something should never happen, it should not be representable in the code
 public enum HTTPClientResult {
-    case success(HTTPURLResponse)
+    case success(Data, HTTPURLResponse) // Data should come in the success case
     case failure(Error)
 }
 
