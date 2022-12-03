@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct FeedItem {
+// made it public so RemoteFeedLoader can access
+// made it equatable for assertion in tests
+public struct FeedItem: Equatable {
     let id: UUID
     let description: String?
     let location: String?
