@@ -38,15 +38,13 @@ final class RemoteFeedLoaderTests: XCTestCase {
     func test_load_deliversErrorOnClientError() {
         let (sut, client) = makeSUT()
 
-        // act make the client fail
+        // Here we stub before we call load. That does not reflect the async nature
         client.error = NSError(domain: "test", code: 0)
 
-        // capture the received error
-        var capturedError: RemoteFeedLoader.Error?
-        sut.load { error in capturedError = error }
+        var capturedErrors = [RemoteFeedLoader.Error]()
+        sut.load { capturedErrors.append($0) }
 
-        // assert
-        XCTAssertEqual(capturedError, .connectivity)
+        XCTAssertEqual(capturedErrors, [.connectivity])
     }
 
     // MARK: - Helpers
