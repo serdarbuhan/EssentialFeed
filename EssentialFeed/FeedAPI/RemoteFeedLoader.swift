@@ -21,10 +21,7 @@ public final class RemoteFeedLoader {
     private let url: URL
     private let client: HTTPClient
 
-    // result type for remote feed loader.
-    // returns feed items with success or error with failure
-    
-    public enum Result: Equatable { // made it equatable for assertion in tests
+    public enum Result: Equatable {
         case success([FeedItem])
         case failure(Error)
     }
@@ -42,8 +39,14 @@ public final class RemoteFeedLoader {
     public func load(completion: @escaping (Result) -> Void) {
         client.get(from: url) { result in
             switch result {
-            case .success:
-                completion(.failure(.invalidData))
+            case let .success(data, _):
+
+                // check if json is valid return empty for now
+                if let _ = try? JSONSerialization.jsonObject(with: data) {
+                    completion(.success([]))
+                } else {
+                    completion(.failure(.invalidData))
+                }
             case .failure:
                 completion(.failure(.connectivity))
             }
