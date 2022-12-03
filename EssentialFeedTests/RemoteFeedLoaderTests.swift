@@ -36,14 +36,19 @@ final class RemoteFeedLoaderTests: XCTestCase {
     }
 
     func test_load_deliversErrorOnClientError() {
+
+        // Arrange
         let (sut, client) = makeSUT()
 
-        // Here we stub before we call load. That does not reflect the async nature
-        client.error = NSError(domain: "test", code: 0)
-
+        // Act
         var capturedErrors = [RemoteFeedLoader.Error]()
         sut.load { capturedErrors.append($0) }
 
+        // acting on the completions later on. cient error part was inside arrange before. now in the act section
+        let clientError = NSError(domain: "test", code: 0)
+        client.completions[0](clientError)
+
+        // Assert
         XCTAssertEqual(capturedErrors, [.connectivity])
     }
 
@@ -56,14 +61,12 @@ final class RemoteFeedLoaderTests: XCTestCase {
 
     private class HTTPClientSpy: HTTPClient {
         var requestedURLs = [URL]()
-        var error: Error?
+        var completions = [(Error) -> Void]()
 
+        // We are not stubbing. Accumulating completions
         func get(from url: URL, completion: @escaping (Error) -> Void) {
-
-            if let error = error {
-                completion(error)
-            }
             requestedURLs.append(url)
+            completions.append(completion)
         }
     }
 }
