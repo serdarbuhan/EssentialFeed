@@ -9,8 +9,7 @@ import Foundation
 
 public protocol HTTPClient {
     func get(from url: URL,
-             completion: @escaping (Error?, HTTPURLResponse?) -> Void) // Either error or http url response.
-                                    // optionals here is tricky, but will be handled later
+             completion: @escaping (Error?, HTTPURLResponse?) -> Void)
 }
 
 public final class RemoteFeedLoader {
@@ -19,7 +18,7 @@ public final class RemoteFeedLoader {
 
     public enum Error: Swift.Error {
         case connectivity
-        case invalidData // domain error for non 200 http response
+        case invalidData
     }
 
     public init(url: URL, client: HTTPClient) {
@@ -34,8 +33,6 @@ public final class RemoteFeedLoader {
             } else {
                 completion(.connectivity)
             }
-            // if completion was here we would get error. capturing values in array in the test helps us to catch that
-            // completion(.connectivity)
         }
     }
 }
