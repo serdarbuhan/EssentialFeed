@@ -22,14 +22,3 @@ public struct FeedItem: Equatable {
         self.imageURL = imageURL
     }
 }
-
-// Make FeedItem Decodable for JSON Decoder
-// But API details are leaking into FeedFeature module
-extension FeedItem: Decodable {
-    private enum CodingKeys: String, CodingKey {
-        case id
-        case description
-        case location
-        case imageURL = "image"
-    }
-}
