@@ -36,19 +36,14 @@ final class RemoteFeedLoaderTests: XCTestCase {
     }
 
     func test_load_deliversErrorOnClientError() {
-
-        // Arrange
         let (sut, client) = makeSUT()
 
-        // Act
         var capturedErrors = [RemoteFeedLoader.Error]()
         sut.load { capturedErrors.append($0) }
 
-        // acting on the completions later on. cient error part was inside arrange before. now in the act section
         let clientError = NSError(domain: "test", code: 0)
-        client.completions[0](clientError)
+        client.complete(with: clientError)
 
-        // Assert
         XCTAssertEqual(capturedErrors, [.connectivity])
     }
 
@@ -63,10 +58,14 @@ final class RemoteFeedLoaderTests: XCTestCase {
         var requestedURLs = [URL]()
         var completions = [(Error) -> Void]()
 
-        // We are not stubbing. Accumulating completions
         func get(from url: URL, completion: @escaping (Error) -> Void) {
             requestedURLs.append(url)
             completions.append(completion)
+        }
+
+        // cleaner test cases
+        func complete(with error: Error, at index: Int = 0) {
+            completions[index](error)
         }
     }
 }
