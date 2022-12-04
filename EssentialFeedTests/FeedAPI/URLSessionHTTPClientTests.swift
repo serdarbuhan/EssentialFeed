@@ -15,7 +15,7 @@ class URLSessionHTTPClient {
     }
 
     func get(from url: URL) {
-        session.dataTask(with: url) { _, _, _ in }
+        session.dataTask(with: url) { _, _, _ in }.resume()
     }
 }
 
@@ -29,6 +29,16 @@ class URLSessionHTTPClientTests: XCTestCase {
         XCTAssertEqual(session.receivedURLs, [url])
     }
 
+    func test_getFromURL_resumesDataTaskWithURL() {
+        let url = URL(string: "http://any-url.com")!
+        let session = URLSessionSpy()
+        let task = URLSessionDataTaskSpy()
+        session.stub(url: url, task: task)
+        let sut = URLSessionHTTPClient(session: session)
+        sut.get(from: url)
+        XCTAssertEqual(task.resumeCallCount, 1)
+    }
+
     // MARK: - Helpers
 
     // Subclassing the class we don't own. We don't know their implementation. It can change in the future
@@ -36,15 +46,35 @@ class URLSessionHTTPClientTests: XCTestCase {
     // there are other methods in URLSession that you don't override
     private class URLSessionSpy: URLSession {
         var receivedURLs = [URL]()
+        private var stubs = [URL: URLSessionDataTask]()
+
+        func stub(url: URL, task: URLSessionDataTask) {
+            stubs[url] = task
+        }
 
         override func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
             receivedURLs.append(url)
-            return FakeURLSessionDataTask()
+            return stubs[url] ?? FakeURLSessionDataTask()
         }
 
     }
+    // tests are tied to the implementation (mocked classes)
+    // We should only test just the behaviour
+    // implementation should be private
 
+    // you need to know how they behave. it might couple the tests with the production code
+    // tests are checking the exact implementation
     private class FakeURLSessionDataTask: URLSessionDataTask {
+        override func resume() { // this is only required for testing purposes
 
+        }
+    }
+
+    private class URLSessionDataTaskSpy: URLSessionDataTask {
+        var resumeCallCount = 0
+
+        override func resume() {
+            resumeCallCount += 1
+        }
     }
 }
