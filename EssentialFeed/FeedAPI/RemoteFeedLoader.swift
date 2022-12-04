@@ -7,7 +7,6 @@
 
 import Foundation
 
-// Now RemoteFeedLoader from API module conforms to the Feed Feature module protocol
 public final class RemoteFeedLoader: FeedLoader {
     private let url: URL
     private let client: HTTPClient
