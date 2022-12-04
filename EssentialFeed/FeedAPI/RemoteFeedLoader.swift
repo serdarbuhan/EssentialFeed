@@ -30,13 +30,10 @@ public final class RemoteFeedLoader {
         client.get(from: url) { result in
             switch result {
             case let .success(data, response):
-
-                do {
-                    let items = try FeedItemsMapper.map(data, response)
-                    completion(.success(items))
-                } catch {
-                    completion(.failure(.invalidData))
-                }
+                // Static method is nice, not capturing self
+                // but if self is deallocated, this completion can still run.
+                // this might be a bug
+                completion(FeedItemsMapper.map(data, from: response))
             case .failure:
                 completion(.failure(.connectivity))
             }
