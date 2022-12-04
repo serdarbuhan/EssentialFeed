@@ -28,11 +28,6 @@ public final class RemoteFeedLoader {
 
     public func load(completion: @escaping (Result) -> Void) {
         client.get(from: url) { [weak self] result in
-            // Static method is nice, not capturing self
-            // but if self is deallocated, this completion can still run.
-            // this might be a bug
-
-            // check self to prevent this. also added tests for completion after the instance is deallocated
             guard self != nil else { return }
 
             switch result {
