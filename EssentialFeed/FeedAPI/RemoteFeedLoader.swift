@@ -7,7 +7,8 @@
 
 import Foundation
 
-public final class RemoteFeedLoader {
+// Now RemoteFeedLoader from API module conforms to the Feed Feature module protocol
+public final class RemoteFeedLoader: FeedLoader {
     private let url: URL
     private let client: HTTPClient
 
@@ -23,7 +24,6 @@ public final class RemoteFeedLoader {
         self.client = client
     }
 
-    // Updating the result type. Using it from FeedFeature
     public func load(completion: @escaping (Result) -> Void) {
         client.get(from: url) { [weak self] result in
             guard self != nil else { return }
