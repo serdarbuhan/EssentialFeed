@@ -21,14 +21,6 @@ class URLSessionHTTPClient {
 
 class URLSessionHTTPClientTests: XCTestCase {
 
-    func test_getFromURL_createsDataTaskWithURL() {
-        let url = URL(string: "http://any-url.com")!
-        let session = URLSessionSpy()
-        let sut = URLSessionHTTPClient(session: session)
-        sut.get(from: url)
-        XCTAssertEqual(session.receivedURLs, [url])
-    }
-
     func test_getFromURL_resumesDataTaskWithURL() {
         let url = URL(string: "http://any-url.com")!
         let session = URLSessionSpy()
@@ -45,7 +37,6 @@ class URLSessionHTTPClientTests: XCTestCase {
     // Mocking classes you don't own can create problems
     // there are other methods in URLSession that you don't override
     private class URLSessionSpy: URLSession {
-        var receivedURLs = [URL]()
         private var stubs = [URL: URLSessionDataTask]()
 
         func stub(url: URL, task: URLSessionDataTask) {
@@ -53,7 +44,6 @@ class URLSessionHTTPClientTests: XCTestCase {
         }
 
         override func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
-            receivedURLs.append(url)
             return stubs[url] ?? FakeURLSessionDataTask()
         }
 
