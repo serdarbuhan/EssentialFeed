@@ -21,20 +21,19 @@ class LocalFeedLoader {
     func save(_ items: [FeedItem], completion: @escaping (Error?) -> Void) {
         store.deleteCachedFeed { [weak self] error in
             guard let self = self else { return }
-            if error == nil {
+
+            if let cacheDeletionError = error {
+                completion(cacheDeletionError)
+            } else {
                 self.store.insert(items, timestamp: self.currentDate()) { [weak self] error in
                     guard self != nil else { return }
                     completion(error)
                 }
-            } else {
-                completion(error)
             }
         }
     }
 }
 
-// This Feed store protocol is an extra layer between the app and frameworks
-// But it separates the business logic from the frameworks.
 protocol FeedStore {
     typealias DeletionCompletion = (Error?) -> Void
     typealias InsertionCompletion = (Error?) -> Void
@@ -183,10 +182,6 @@ class CacheFeedUseCaseTests: XCTestCase {
         return NSError(domain: "any error", code: 0)
     }
 
-    // Up until this point, we implemented the test code and production interface
-    // By declaring the class and adding the API progressively, you're not tied to a protocol.
-    // Speeds up the development without fixing the spy continuously
-    // Now it's time to extract production interface
     class FeedStoreSpy: FeedStore {
         enum ReceivedMessage: Equatable {
             case deleteCachedFeed
