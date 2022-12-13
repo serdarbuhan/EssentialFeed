@@ -202,7 +202,7 @@ final class CodableFeedStoreTests: XCTestCase {
             deletionError = receivedDeletionError
             exp.fulfill()
         }
-        wait(for: [exp], timeout: 1.0)
+        wait(for: [exp], timeout: 10.0) // Completion takes longer for deletion tests. Especially when dispatched to another thread
         return deletionError
     }
 
