@@ -289,11 +289,11 @@
 		C89A7556293A567500998336 /* EssentialFeed */ = {
 			isa = PBXGroup;
 			children = (
+				C89A7572293A587E00998336 /* FeedFeature */,
+				C82101E4293AC2AD007A696A /* FeedAPI */,
 				A6D5FC53294686C100DCF17F /* FeedCache */,
 				C89A7558293A567500998336 /* EssentialFeed.docc */,
 				C89A7557293A567500998336 /* EssentialFeed.h */,
-				C82101E4293AC2AD007A696A /* FeedAPI */,
-				C89A7572293A587E00998336 /* FeedFeature */,
 			);
 			path = EssentialFeed;
 			sourceTree = "<group>";
@@ -301,9 +301,9 @@
 		C89A7562293A567500998336 /* EssentialFeedTests */ = {
 			isa = PBXGroup;
 			children = (
-				C82649E7293DFD1700823ACF /* Helpers */,
-				A6D5FC502943997100DCF17F /* FeedCache */,
 				C82101EB293D4832007A696A /* FeedAPI */,
+				A6D5FC502943997100DCF17F /* FeedCache */,
+				C82649E7293DFD1700823ACF /* Helpers */,
 			);
 			path = EssentialFeedTests;
 			sourceTree = "<group>";
