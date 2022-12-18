@@ -233,8 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				A62F2C63294E710700656643 /* EssentialFeediOS.h */,
-				A69355B2294FD7C200D241C7 /* Controllers */,
-				A69355B3294FD7D400D241C7 /* Views */,
+				A69355BF294FD9DB00D241C7 /* Feed UI */,
 			);
 			path = EssentialFeediOS;
 			sourceTree = "<group>";
@@ -243,7 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				A69355A9294FD60B00D241C7 /* Helpers */,
-				A69355B4294FD7E000D241C7 /* Controllers */,
+				A69355C0294FD9FE00D241C7 /* Feed UI */,
 				A62F2C76294E79BF00656643 /* EssentialFeediOSTests-Bridging-Header.h */,
 			);
 			path = EssentialFeediOSTests;
@@ -310,6 +309,23 @@
 				A69355BC294FD96000D241C7 /* FeedViewControllerTests+Assertions.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A69355BF294FD9DB00D241C7 /* Feed UI */ = {
+			isa = PBXGroup;
+			children = (
+				A69355B2294FD7C200D241C7 /* Controllers */,
+				A69355B3294FD7D400D241C7 /* Views */,
+			);
+			path = "Feed UI";
+			sourceTree = "<group>";
+		};
+		A69355C0294FD9FE00D241C7 /* Feed UI */ = {
+			isa = PBXGroup;
+			children = (
+				A69355B4294FD7E000D241C7 /* Controllers */,
+			);
+			path = "Feed UI";
 			sourceTree = "<group>";
 		};
 		A6D5FC502943997100DCF17F /* FeedCache */ = {
