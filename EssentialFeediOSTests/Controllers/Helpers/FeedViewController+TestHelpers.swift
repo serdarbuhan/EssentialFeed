@@ -5,8 +5,6 @@
 //  Created by Serdar Buhan on 18/12/2022.
 //
 
-import Foundation
-
 import UIKit
 import EssentialFeediOS
 
