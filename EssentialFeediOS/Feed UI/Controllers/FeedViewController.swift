@@ -24,10 +24,6 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
     public override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Works fine but creates another dependency.
-        // If we want to use FeedViewController with another title, it breaks.
-        // FeedViewController should not locate the static title in the presenter directly
-        title = FeedPresenter.title
         refresh()
     }
 

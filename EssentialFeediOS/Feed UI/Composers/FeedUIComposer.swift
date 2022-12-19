@@ -21,6 +21,7 @@ public final class FeedUIComposer {
         let feedController = storyboard.instantiateInitialViewController() as! FeedViewController
 
         feedController.delegate = presentationAdapter
+        feedController.title = FeedPresenter.title // Composer gives the title. VC does not know about the presenter, you can pass it with view model too.
 
         presentationAdapter.presenter = FeedPresenter(feedView: FeedViewAdapter(controller: feedController,
                                                                                 imageLoader: imageLoader),
