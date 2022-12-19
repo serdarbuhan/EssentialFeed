@@ -14,16 +14,13 @@ public final class FeedUIComposer {
     public static func feedComposedWith(feedLoader: FeedLoader, imageLoader: FeedImageDataLoader) -> FeedViewController {
 
         let presentationAdapter = FeedLoaderPresentationAdapter(feedLoader: feedLoader)
-        let refreshController = FeedRefreshViewController(delegate: presentationAdapter)
 
         let bundle = Bundle(for: FeedViewController.self)
         let storyboard = UIStoryboard(name: "Feed", bundle: bundle)
 
-        // this force casting is valid because if it fails, it means a developer error.
-        // initial view controller on the storyboard should be a type of FeedViewController
         let feedController = storyboard.instantiateInitialViewController() as! FeedViewController
-        feedController.refreshController = refreshController
-        // moved to property injection and lost the compile time checks for types. it was checked on the initialiser method
+        let refreshController = feedController.refreshController!
+        refreshController.delegate = presentationAdapter
 
         presentationAdapter.presenter = FeedPresenter(feedView: FeedViewAdapter(controller: feedController,
                                                                                 imageLoader: imageLoader),
