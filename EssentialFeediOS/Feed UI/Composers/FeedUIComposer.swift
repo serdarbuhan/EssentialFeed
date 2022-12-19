@@ -15,17 +15,23 @@ public final class FeedUIComposer {
 
         let presentationAdapter = FeedLoaderPresentationAdapter(feedLoader: feedLoader)
 
-        let bundle = Bundle(for: FeedViewController.self)
-        let storyboard = UIStoryboard(name: "Feed", bundle: bundle)
-
-        let feedController = storyboard.instantiateInitialViewController() as! FeedViewController
-
-        feedController.delegate = presentationAdapter
-        feedController.title = FeedPresenter.title // Composer gives the title. VC does not know about the presenter, you can pass it with view model too.
+        let feedController = FeedViewController.makeWith(delegate: presentationAdapter,
+                                                         title: FeedPresenter.title)
 
         presentationAdapter.presenter = FeedPresenter(feedView: FeedViewAdapter(controller: feedController,
                                                                                 imageLoader: imageLoader),
                                                       loadingView: WeakRefVirtualProxy(feedController))
+        return feedController
+    }
+}
+
+private extension FeedViewController {
+    static func makeWith(delegate: FeedViewControllerDelegate, title: String) -> FeedViewController {
+        let bundle = Bundle(for: FeedViewController.self)
+        let storyboard = UIStoryboard(name: "Feed", bundle: bundle)
+        let feedController = storyboard.instantiateInitialViewController() as! FeedViewController
+        feedController.delegate = delegate
+        feedController.title = FeedPresenter.title
         return feedController
     }
 }
