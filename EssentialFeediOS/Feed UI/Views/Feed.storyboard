@@ -11,7 +11,7 @@
         <!--Feed View Controller-->
         <scene sceneID="z1T-vx-2J8">
             <objects>
-                <tableViewController id="l99-80-f94" customClass="FeedViewController" customModule="Prototype" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="l99-80-f94" customClass="FeedViewController" customModule="EssentialFeediOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="yT9-G9-Rr0">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +28,7 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedImageCell" rowHeight="580" id="uj1-cz-HWJ" customClass="FeedImageCell" customModule="Prototype" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedImageCell" rowHeight="580" id="uj1-cz-HWJ" customClass="FeedImageCell" customModule="EssentialFeediOS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="66" width="393" height="580"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uj1-cz-HWJ" id="Nj6-kn-M5O">
@@ -81,6 +81,9 @@ Location</string>
                                                                 <fontDescription key="titleFontDescription" type="system" pointSize="60"/>
                                                                 <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </buttonConfiguration>
+                                                            <connections>
+                                                                <action selector="retryButtonTapped" destination="uj1-cz-HWJ" eventType="touchUpInside" id="Pbx-Mz-NNo"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -123,6 +126,14 @@ Location</string>
                                         <constraint firstItem="PLt-Wx-sYb" firstAttribute="trailing" secondItem="Nj6-kn-M5O" secondAttribute="trailingMargin" id="uZT-Xa-Dg1"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="QuJ-JU-3xC" id="YcW-IK-zKy"/>
+                                    <outlet property="feedImageContainer" destination="fP5-8h-oiL" id="AcS-Xk-cnt"/>
+                                    <outlet property="feedImageRetryButton" destination="s1r-Jo-wG5" id="RlL-MU-h02"/>
+                                    <outlet property="feedImageView" destination="03b-eP-NKb" id="xl9-gc-ViA"/>
+                                    <outlet property="locationContainer" destination="QxA-rd-Yca" id="BzS-l8-bZP"/>
+                                    <outlet property="locationLabel" destination="puR-yZ-L2G" id="laO-h9-22t"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -141,7 +152,7 @@ Location</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j1l-Ch-Ftu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="994.6564885496183" y="31.690140845070424"/>
+            <point key="canvasLocation" x="680" y="-18"/>
         </scene>
     </scenes>
     <resources>
