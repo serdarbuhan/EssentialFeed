@@ -26,6 +26,7 @@
 		A679366A2955D776008635DC /* FeedImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67936692955D776008635DC /* FeedImagePresenter.swift */; };
 		A679366C2955D803008635DC /* FeedImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A679366B2955D803008635DC /* FeedImageViewModel.swift */; };
 		A679366D2955F17C008635DC /* FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69355C2294FDA6500D241C7 /* FeedImageDataLoader.swift */; };
+		A679366F2955F22C008635DC /* RemoteFeedImageDataLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A679366E2955F22C008635DC /* RemoteFeedImageDataLoaderTests.swift */; };
 		A6854B3C294A2CEC0034B168 /* FeedCacheTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D5FC632947D4C400DCF17F /* FeedCacheTestHelpers.swift */; };
 		A6854B3D294A2CFC0034B168 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D5FC652947D57B00DCF17F /* SharedTestHelpers.swift */; };
 		A68AB3432954AF9F0064CCB4 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68AB3422954AF9F0064CCB4 /* ErrorView.swift */; };
@@ -164,6 +165,7 @@
 		A67936672955D1BE008635DC /* FeedImagePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImagePresenterTests.swift; sourceTree = "<group>"; };
 		A67936692955D776008635DC /* FeedImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImagePresenter.swift; sourceTree = "<group>"; };
 		A679366B2955D803008635DC /* FeedImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageViewModel.swift; sourceTree = "<group>"; };
+		A679366E2955F22C008635DC /* RemoteFeedImageDataLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedImageDataLoaderTests.swift; sourceTree = "<group>"; };
 		A68AB3422954AF9F0064CCB4 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		A68AB3472954B3650064CCB4 /* UIRefreshControl+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Helpers.swift"; sourceTree = "<group>"; };
 		A68AB34A2954B5F40064CCB4 /* FeedPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenterTests.swift; sourceTree = "<group>"; };
@@ -509,6 +511,7 @@
 			children = (
 				C89A7563293A567500998336 /* LoadFeedFromRemoteUseCaseTests.swift */,
 				C82101EC293D5A44007A696A /* URLSessionHTTPClientTests.swift */,
+				A679366E2955F22C008635DC /* RemoteFeedImageDataLoaderTests.swift */,
 			);
 			path = FeedAPI;
 			sourceTree = "<group>";
@@ -917,6 +920,7 @@
 				A6D5FC642947D4C400DCF17F /* FeedCacheTestHelpers.swift in Sources */,
 				A6D5FC622947D0AF00DCF17F /* ValidateFeedCacheUseCaseTests.swift in Sources */,
 				A68AB34B2954B5F40064CCB4 /* FeedPresenterTests.swift in Sources */,
+				A679366F2955F22C008635DC /* RemoteFeedImageDataLoaderTests.swift in Sources */,
 				C89A7564293A567500998336 /* LoadFeedFromRemoteUseCaseTests.swift in Sources */,
 				A67936682955D1BE008635DC /* FeedImagePresenterTests.swift in Sources */,
 				A6D5FC742949439F00DCF17F /* XCTestCase+FailableInsertFeedStoreSpecs.swift in Sources */,
