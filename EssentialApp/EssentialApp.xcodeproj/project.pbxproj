@@ -22,6 +22,7 @@
 		A67936D529573C11008635DC /* FeedImageDataLoaderWithFallbackCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67936D429573C11008635DC /* FeedImageDataLoaderWithFallbackCompositeTests.swift */; };
 		A67936D729573ECE008635DC /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67936D629573ECE008635DC /* FeedImageDataLoaderWithFallbackComposite.swift */; };
 		A67936DE29573FF0008635DC /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67936DD29573FF0008635DC /* XCTestCase+MemoryLeakTracking.swift */; };
+		A67936E129574037008635DC /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67936E029574037008635DC /* SharedTestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		A67936D429573C11008635DC /* FeedImageDataLoaderWithFallbackCompositeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderWithFallbackCompositeTests.swift; sourceTree = "<group>"; };
 		A67936D629573ECE008635DC /* FeedImageDataLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
 		A67936DD29573FF0008635DC /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
+		A67936E029574037008635DC /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		A67936AD2957258B008635DC /* EssentialAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				A67936DF2957402C008635DC /* Helpers */,
 				A67936CF2957314E008635DC /* EssentialAppTests-Bridging-Header.h */,
 				A67936D02957314F008635DC /* FeedLoaderWithFallbackCompositeTests.swift */,
 				A67936D429573C11008635DC /* FeedImageDataLoaderWithFallbackCompositeTests.swift */,
@@ -142,6 +145,14 @@
 				A67936C9295727FA008635DC /* EssentialFeediOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A67936DF2957402C008635DC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A67936E029574037008635DC /* SharedTestHelpers.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A67936E129574037008635DC /* SharedTestHelpers.swift in Sources */,
 				A67936D529573C11008635DC /* FeedImageDataLoaderWithFallbackCompositeTests.swift in Sources */,
 				A67936D12957314F008635DC /* FeedLoaderWithFallbackCompositeTests.swift in Sources */,
 				A67936DE29573FF0008635DC /* XCTestCase+MemoryLeakTracking.swift in Sources */,
