@@ -26,6 +26,7 @@
 		A67936E329574A0F008635DC /* FeedLoaderCacheDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67936E229574A0F008635DC /* FeedLoaderCacheDecoratorTests.swift */; };
 		A67936E529574BD3008635DC /* FeedLoaderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67936E429574BD3008635DC /* FeedLoaderStub.swift */; };
 		A67936E729574C95008635DC /* XCTestCase+FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67936E629574C95008635DC /* XCTestCase+FeedLoader.swift */; };
+		A67936EB295751FD008635DC /* FeedLoaderCacheDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67936EA295751FD008635DC /* FeedLoaderCacheDecorator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		A67936E229574A0F008635DC /* FeedLoaderCacheDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderCacheDecoratorTests.swift; sourceTree = "<group>"; };
 		A67936E429574BD3008635DC /* FeedLoaderStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderStub.swift; sourceTree = "<group>"; };
 		A67936E629574C95008635DC /* XCTestCase+FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedLoader.swift"; sourceTree = "<group>"; };
+		A67936EA295751FD008635DC /* FeedLoaderCacheDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderCacheDecorator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				A67936A52957258A008635DC /* Info.plist */,
 				A67936D229573B75008635DC /* FeedLoaderWithFallbackComposite.swift */,
 				A67936D629573ECE008635DC /* FeedImageDataLoaderWithFallbackComposite.swift */,
+				A67936EA295751FD008635DC /* FeedLoaderCacheDecorator.swift */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				A679369C29572583008635DC /* ViewController.swift in Sources */,
 				A679369829572583008635DC /* AppDelegate.swift in Sources */,
 				A67936D329573B75008635DC /* FeedLoaderWithFallbackComposite.swift in Sources */,
+				A67936EB295751FD008635DC /* FeedLoaderCacheDecorator.swift in Sources */,
 				A679369A29572583008635DC /* SceneDelegate.swift in Sources */,
 				A67936D729573ECE008635DC /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */,
 			);
