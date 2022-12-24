@@ -32,7 +32,6 @@
 		A67936F12957592C008635DC /* XCTestCase+FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67936F02957592C008635DC /* XCTestCase+FeedImageDataLoader.swift */; };
 		A67936F529575AE0008635DC /* FeedImageDataLoaderCacheDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67936F429575AE0008635DC /* FeedImageDataLoaderCacheDecorator.swift */; };
 		A67936FD29575CCC008635DC /* EssentialAppUIAcceptanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67936FC29575CCC008635DC /* EssentialAppUIAcceptanceTests.swift */; };
-		A67936FF29575CCC008635DC /* EssentialAppUIAcceptanceTestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67936FE29575CCC008635DC /* EssentialAppUIAcceptanceTestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,7 +95,6 @@
 		A67936F429575AE0008635DC /* FeedImageDataLoaderCacheDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderCacheDecorator.swift; sourceTree = "<group>"; };
 		A67936FA29575CCC008635DC /* EssentialAppUIAcceptanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialAppUIAcceptanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A67936FC29575CCC008635DC /* EssentialAppUIAcceptanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialAppUIAcceptanceTests.swift; sourceTree = "<group>"; };
-		A67936FE29575CCC008635DC /* EssentialAppUIAcceptanceTestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialAppUIAcceptanceTestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,7 +202,6 @@
 			isa = PBXGroup;
 			children = (
 				A67936FC29575CCC008635DC /* EssentialAppUIAcceptanceTests.swift */,
-				A67936FE29575CCC008635DC /* EssentialAppUIAcceptanceTestsLaunchTests.swift */,
 			);
 			path = EssentialAppUIAcceptanceTests;
 			sourceTree = "<group>";
@@ -373,7 +370,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A67936FF29575CCC008635DC /* EssentialAppUIAcceptanceTestsLaunchTests.swift in Sources */,
 				A67936FD29575CCC008635DC /* EssentialAppUIAcceptanceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
