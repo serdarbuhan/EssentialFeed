@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A6087A4A2957A15900F5BDDD /* FeedSnaphotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6087A492957A15900F5BDDD /* FeedSnaphotTests.swift */; };
 		A6087A4D2957A53000F5BDDD /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6087A4C2957A53000F5BDDD /* UIImage+TestHelpers.swift */; };
+		A6087A4F2957A68600F5BDDD /* UITableView+HeaderSizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6087A4E2957A68600F5BDDD /* UITableView+HeaderSizing.swift */; };
 		A62F2C69294E710800656643 /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A62F2C61294E710600656643 /* EssentialFeediOS.framework */; };
 		A62F2C6F294E710800656643 /* EssentialFeediOS.h in Headers */ = {isa = PBXBuildFile; fileRef = A62F2C63294E710700656643 /* EssentialFeediOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A62F2C7A294E7C2C00656643 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C89A7554293A567500998336 /* EssentialFeed.framework */; platformFilter = ios; };
@@ -149,6 +150,7 @@
 /* Begin PBXFileReference section */
 		A6087A492957A15900F5BDDD /* FeedSnaphotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSnaphotTests.swift; sourceTree = "<group>"; };
 		A6087A4C2957A53000F5BDDD /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
+		A6087A4E2957A68600F5BDDD /* UITableView+HeaderSizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+HeaderSizing.swift"; sourceTree = "<group>"; };
 		A62F2C61294E710600656643 /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A62F2C63294E710700656643 /* EssentialFeediOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EssentialFeediOS.h; sourceTree = "<group>"; };
 		A62F2C68294E710800656643 /* EssentialFeediOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeediOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -356,6 +358,7 @@
 				A69355E22950B31500D241C7 /* UITableView+Dequeueing.swift */,
 				A69355E42950C15600D241C7 /* UIImageView+Animations.swift */,
 				A68AB3472954B3650064CCB4 /* UIRefreshControl+Helpers.swift */,
+				A6087A4E2957A68600F5BDDD /* UITableView+HeaderSizing.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -828,6 +831,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6087A4F2957A68600F5BDDD /* UITableView+HeaderSizing.swift in Sources */,
 				A68AB3432954AF9F0064CCB4 /* ErrorView.swift in Sources */,
 				A68AB3482954B3650064CCB4 /* UIRefreshControl+Helpers.swift in Sources */,
 				A69355E32950B31500D241C7 /* UITableView+Dequeueing.swift in Sources */,
