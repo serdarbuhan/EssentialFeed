@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A6087A20295772C500F5BDDD /* DebuggingSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6087A1F295772C500F5BDDD /* DebuggingSceneDelegate.swift */; };
 		A6087A2229578C6F00F5BDDD /* SceneDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6087A2129578C6F00F5BDDD /* SceneDelegateTests.swift */; };
 		A6087A2929578F2500F5BDDD /* FeedViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6087A2829578F2400F5BDDD /* FeedViewAdapter.swift */; };
 		A6087A2A29578F2500F5BDDD /* FeedImageDataLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6087A2329578F2300F5BDDD /* FeedImageDataLoaderPresentationAdapter.swift */; };
@@ -78,7 +77,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A6087A1F295772C500F5BDDD /* DebuggingSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingSceneDelegate.swift; sourceTree = "<group>"; };
 		A6087A2129578C6F00F5BDDD /* SceneDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegateTests.swift; sourceTree = "<group>"; };
 		A6087A2329578F2300F5BDDD /* FeedImageDataLoaderPresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderPresentationAdapter.swift; sourceTree = "<group>"; };
 		A6087A2429578F2300F5BDDD /* FeedUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIComposer.swift; sourceTree = "<group>"; };
@@ -175,7 +173,6 @@
 				A6087A2829578F2400F5BDDD /* FeedViewAdapter.swift */,
 				A679369729572583008635DC /* AppDelegate.swift */,
 				A679369929572583008635DC /* SceneDelegate.swift */,
-				A6087A1F295772C500F5BDDD /* DebuggingSceneDelegate.swift */,
 				A679369B29572583008635DC /* ViewController.swift */,
 				A679369D29572583008635DC /* Main.storyboard */,
 				A67936A02957258A008635DC /* Assets.xcassets */,
@@ -346,7 +343,6 @@
 				A6087A2A29578F2500F5BDDD /* FeedImageDataLoaderPresentationAdapter.swift in Sources */,
 				A67936D329573B75008635DC /* FeedLoaderWithFallbackComposite.swift in Sources */,
 				A67936EB295751FD008635DC /* FeedLoaderCacheDecorator.swift in Sources */,
-				A6087A20295772C500F5BDDD /* DebuggingSceneDelegate.swift in Sources */,
 				A679369A29572583008635DC /* SceneDelegate.swift in Sources */,
 				A67936D729573ECE008635DC /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */,
 				A6087A2929578F2500F5BDDD /* FeedViewAdapter.swift in Sources */,
