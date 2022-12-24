@@ -20,6 +20,7 @@
 		A67936D12957314F008635DC /* FeedLoaderWithFallbackCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67936D02957314F008635DC /* FeedLoaderWithFallbackCompositeTests.swift */; };
 		A67936D329573B75008635DC /* FeedLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67936D229573B75008635DC /* FeedLoaderWithFallbackComposite.swift */; };
 		A67936D529573C11008635DC /* FeedImageDataLoaderWithFallbackCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67936D429573C11008635DC /* FeedImageDataLoaderWithFallbackCompositeTests.swift */; };
+		A67936D729573ECE008635DC /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67936D629573ECE008635DC /* FeedImageDataLoaderWithFallbackComposite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		A67936D02957314F008635DC /* FeedLoaderWithFallbackCompositeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackCompositeTests.swift; sourceTree = "<group>"; };
 		A67936D229573B75008635DC /* FeedLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
 		A67936D429573C11008635DC /* FeedImageDataLoaderWithFallbackCompositeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderWithFallbackCompositeTests.swift; sourceTree = "<group>"; };
+		A67936D629573ECE008635DC /* FeedImageDataLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				A67936A22957258A008635DC /* LaunchScreen.storyboard */,
 				A67936A52957258A008635DC /* Info.plist */,
 				A67936D229573B75008635DC /* FeedLoaderWithFallbackComposite.swift */,
+				A67936D629573ECE008635DC /* FeedImageDataLoaderWithFallbackComposite.swift */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				A679369829572583008635DC /* AppDelegate.swift in Sources */,
 				A67936D329573B75008635DC /* FeedLoaderWithFallbackComposite.swift in Sources */,
 				A679369A29572583008635DC /* SceneDelegate.swift in Sources */,
+				A67936D729573ECE008635DC /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
