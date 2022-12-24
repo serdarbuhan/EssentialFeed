@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6087A4A2957A15900F5BDDD /* FeedSnaphotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6087A492957A15900F5BDDD /* FeedSnaphotTests.swift */; };
 		A62F2C69294E710800656643 /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A62F2C61294E710600656643 /* EssentialFeediOS.framework */; };
 		A62F2C6F294E710800656643 /* EssentialFeediOS.h in Headers */ = {isa = PBXBuildFile; fileRef = A62F2C63294E710700656643 /* EssentialFeediOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A62F2C7A294E7C2C00656643 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C89A7554293A567500998336 /* EssentialFeed.framework */; platformFilter = ios; };
@@ -145,6 +146,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A6087A492957A15900F5BDDD /* FeedSnaphotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSnaphotTests.swift; sourceTree = "<group>"; };
 		A62F2C61294E710600656643 /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A62F2C63294E710700656643 /* EssentialFeediOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EssentialFeediOS.h; sourceTree = "<group>"; };
 		A62F2C68294E710800656643 /* EssentialFeediOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeediOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -293,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				A62F2C76294E79BF00656643 /* EssentialFeediOSTests-Bridging-Header.h */,
+				A6087A492957A15900F5BDDD /* FeedSnaphotTests.swift */,
 			);
 			path = EssentialFeediOSTests;
 			sourceTree = "<group>";
@@ -830,6 +833,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A62F2C7F294E7D2B00656643 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
+				A6087A4A2957A15900F5BDDD /* FeedSnaphotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
