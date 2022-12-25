@@ -95,7 +95,6 @@
 		C89A7564293A567500998336 /* FeedItemsMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89A7563293A567500998336 /* FeedItemsMapperTests.swift */; };
 		C89A7565293A567500998336 /* EssentialFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = C89A7557293A567500998336 /* EssentialFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C89A756F293A56A000998336 /* FeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89A756E293A56A000998336 /* FeedImage.swift */; };
-		C89A7571293A574C00998336 /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89A7570293A574C00998336 /* FeedLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -238,7 +237,6 @@
 		C89A755E293A567500998336 /* EssentialFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C89A7563293A567500998336 /* FeedItemsMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemsMapperTests.swift; sourceTree = "<group>"; };
 		C89A756E293A56A000998336 /* FeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImage.swift; sourceTree = "<group>"; };
-		C89A7570293A574C00998336 /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -655,7 +653,6 @@
 			isa = PBXGroup;
 			children = (
 				C89A756E293A56A000998336 /* FeedImage.swift */,
-				C89A7570293A574C00998336 /* FeedLoader.swift */,
 				A69355C2294FDA6500D241C7 /* FeedImageDataLoader.swift */,
 				A67936E82957513C008635DC /* FeedCache.swift */,
 				A67936F229575A73008635DC /* FeedImageDataCache.swift */,
@@ -968,7 +965,6 @@
 				A67936E92957513C008635DC /* FeedCache.swift in Sources */,
 				C82101E8293D3BFA007A696A /* HTTPClient.swift in Sources */,
 				A679368A29565F67008635DC /* CoreDataFeedStore+FeedStore.swift in Sources */,
-				C89A7571293A574C00998336 /* FeedLoader.swift in Sources */,
 				A6D5FC85294A119400DCF17F /* ManagedCache.swift in Sources */,
 				A679367D29560AA6008635DC /* FeedImageDataStore.swift in Sources */,
 				A6793677295601C7008635DC /* HTTPURLResponse+StatusCode.swift in Sources */,
