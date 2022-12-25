@@ -48,7 +48,7 @@ class EssentialFeedAPIEndToEndTests: XCTestCase {
     private func getFeedResult(file: StaticString = #file, line: UInt = #line) -> FeedLoader.Result? {
 
         // Default cache folder /Users/serdarbuhan/Library/Caches/com.apple.dt.xctest.tool
-        let loader = RemoteFeedLoader(url: feedTestServerURL, client: ephemeralClient())
+        let loader = RemoteLoader(url: feedTestServerURL, client: ephemeralClient(), mapper: FeedItemsMapper.map)
         trackForMemoryLeaks(loader, file: file, line: line)
         let exp = expectation(description: "Wait for load completion")
 
