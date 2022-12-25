@@ -555,6 +555,23 @@
 			path = "Shared API Infra";
 			sourceTree = "<group>";
 		};
+		A6F848922958A39300D212A4 /* Image Comments API */ = {
+			isa = PBXGroup;
+			children = (
+				A6F8488629588EBE00D212A4 /* RemoteImageCommentsLoader.swift */,
+				A6F8488829588F3300D212A4 /* ImageCommentsMapper.swift */,
+			);
+			path = "Image Comments API";
+			sourceTree = "<group>";
+		};
+		A6F848932958A3C100D212A4 /* Image Comments API */ = {
+			isa = PBXGroup;
+			children = (
+				A6F8488429588DDC00D212A4 /* LoadImageCommentsFromRemoteUseCaseTests.swift */,
+			);
+			path = "Image Comments API";
+			sourceTree = "<group>";
+		};
 		C82101E4293AC2AD007A696A /* FeedAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -563,8 +580,6 @@
 				C82101E9293D3C31007A696A /* FeedItemsMapper.swift */,
 				A6D5FC5829469BCD00DCF17F /* RemoteFeedItem.swift */,
 				A67936732955FF2A008635DC /* RemoteFeedImageDataLoader.swift */,
-				A6F8488629588EBE00D212A4 /* RemoteImageCommentsLoader.swift */,
-				A6F8488829588F3300D212A4 /* ImageCommentsMapper.swift */,
 			);
 			path = FeedAPI;
 			sourceTree = "<group>";
@@ -574,7 +589,6 @@
 			children = (
 				C89A7563293A567500998336 /* LoadFeedFromRemoteUseCaseTests.swift */,
 				A679366E2955F22C008635DC /* LoadFeedImageDataFromRemoteUseCaseTests.swift */,
-				A6F8488429588DDC00D212A4 /* LoadImageCommentsFromRemoteUseCaseTests.swift */,
 			);
 			path = FeedAPI;
 			sourceTree = "<group>";
@@ -622,6 +636,7 @@
 				A6F8488A2958938300D212A4 /* Image Comments Feature */,
 				A6F8488D2958A28600D212A4 /* Shared API */,
 				A6F8488E2958A29A00D212A4 /* Shared API Infra */,
+				A6F848922958A39300D212A4 /* Image Comments API */,
 				C82101E4293AC2AD007A696A /* FeedAPI */,
 				A6D5FC53294686C100DCF17F /* FeedCache */,
 				A679365C2955CD69008635DC /* FeedPresentation */,
@@ -637,6 +652,7 @@
 				C82649E7293DFD1700823ACF /* Helpers */,
 				A6F8488F2958A2E500D212A4 /* Shared API */,
 				A6F848912958A31000D212A4 /* Shared API Infra */,
+				A6F848932958A3C100D212A4 /* Image Comments API */,
 				C82101EB293D4832007A696A /* FeedAPI */,
 				A6D5FC502943997100DCF17F /* FeedCache */,
 				A68AB3492954B5E40064CCB4 /* FeedPresentation */,
