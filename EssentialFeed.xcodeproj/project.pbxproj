@@ -46,6 +46,7 @@
 		A63C7006295B26E000A29D2C /* IMAGE_COMMENTS_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = A63C7004295B26E000A29D2C /* IMAGE_COMMENTS_dark.png */; };
 		A63C7007295B26E000A29D2C /* IMAGE_COMMENTS_light.png in Resources */ = {isa = PBXBuildFile; fileRef = A63C7005295B26E000A29D2C /* IMAGE_COMMENTS_light.png */; };
 		A63C7009295B2B7000A29D2C /* ImageCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63C7008295B2B7000A29D2C /* ImageCommentCell.swift */; };
+		A63C700B295B3D3D00A29D2C /* CellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63C700A295B3D3D00A29D2C /* CellController.swift */; };
 		A678790D2958E11600038E34 /* FeedImageDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A678790C2958E11600038E34 /* FeedImageDataMapper.swift */; };
 		A679365E2955CD80008635DC /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A679365D2955CD80008635DC /* FeedPresenter.swift */; };
 		A679365F2955CE2B008635DC /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = A67936592955CC86008635DC /* Feed.strings */; };
@@ -217,6 +218,7 @@
 		A63C7004295B26E000A29D2C /* IMAGE_COMMENTS_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMAGE_COMMENTS_dark.png; sourceTree = "<group>"; };
 		A63C7005295B26E000A29D2C /* IMAGE_COMMENTS_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMAGE_COMMENTS_light.png; sourceTree = "<group>"; };
 		A63C7008295B2B7000A29D2C /* ImageCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentCell.swift; sourceTree = "<group>"; };
+		A63C700A295B3D3D00A29D2C /* CellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellController.swift; sourceTree = "<group>"; };
 		A678790C2958E11600038E34 /* FeedImageDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataMapper.swift; sourceTree = "<group>"; };
 		A67936582955CC86008635DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
 		A679365A2955CC8A008635DC /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Feed.strings; sourceTree = "<group>"; };
@@ -457,6 +459,7 @@
 			isa = PBXGroup;
 			children = (
 				A62F2C80294E8C6800656643 /* ListViewController.swift */,
+				A63C700A295B3D3D00A29D2C /* CellController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1116,6 +1119,7 @@
 				A6087A4F2957A68600F5BDDD /* UITableView+HeaderSizing.swift in Sources */,
 				A68AB3432954AF9F0064CCB4 /* ErrorView.swift in Sources */,
 				A68AB3482954B3650064CCB4 /* UIRefreshControl+Helpers.swift in Sources */,
+				A63C700B295B3D3D00A29D2C /* CellController.swift in Sources */,
 				A69355E32950B31500D241C7 /* UITableView+Dequeueing.swift in Sources */,
 				A62F2C85294EAC5500656643 /* UIView+Shimmering.swift in Sources */,
 				A69355E52950C15600D241C7 /* UIImageView+Animations.swift in Sources */,
