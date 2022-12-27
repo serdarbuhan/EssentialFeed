@@ -365,6 +365,7 @@
 		A62F2C62294E710700656643 /* EssentialFeediOS */ = {
 			isa = PBXGroup;
 			children = (
+				A63C6FF1295B1ED600A29D2C /* Shared UI */,
 				A62F2C63294E710700656643 /* EssentialFeediOS.h */,
 				A69355BF294FD9DB00D241C7 /* Feed UI */,
 			);
@@ -430,6 +431,42 @@
 			path = snapshots;
 			sourceTree = "<group>";
 		};
+		A63C6FF1295B1ED600A29D2C /* Shared UI */ = {
+			isa = PBXGroup;
+			children = (
+				A63C6FF2295B1EE200A29D2C /* Controllers */,
+				A63C6FF3295B1F0000A29D2C /* Views */,
+			);
+			path = "Shared UI";
+			sourceTree = "<group>";
+		};
+		A63C6FF2295B1EE200A29D2C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A62F2C80294E8C6800656643 /* ListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A63C6FF3295B1F0000A29D2C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A63C6FF4295B1F3500A29D2C /* Helpers */,
+				A68AB3422954AF9F0064CCB4 /* ErrorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A63C6FF4295B1F3500A29D2C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A69355E22950B31500D241C7 /* UITableView+Dequeueing.swift */,
+				A68AB3472954B3650064CCB4 /* UIRefreshControl+Helpers.swift */,
+				A6087A4E2957A68600F5BDDD /* UITableView+HeaderSizing.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		A679365C2955CD69008635DC /* FeedPresentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -462,10 +499,7 @@
 			isa = PBXGroup;
 			children = (
 				A62F2C84294EAC5500656643 /* UIView+Shimmering.swift */,
-				A69355E22950B31500D241C7 /* UITableView+Dequeueing.swift */,
 				A69355E42950C15600D241C7 /* UIImageView+Animations.swift */,
-				A68AB3472954B3650064CCB4 /* UIRefreshControl+Helpers.swift */,
-				A6087A4E2957A68600F5BDDD /* UITableView+HeaderSizing.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -491,7 +525,6 @@
 		A69355B2294FD7C200D241C7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A62F2C80294E8C6800656643 /* ListViewController.swift */,
 				A69355C6294FE1BE00D241C7 /* FeedImageCellController.swift */,
 			);
 			path = Controllers;
@@ -504,7 +537,6 @@
 				A68AB3442954B2B70064CCB4 /* Helpers */,
 				A69355DE2950A5AB00D241C7 /* Feed.storyboard */,
 				A69355E02950A5B900D241C7 /* Feed.xcassets */,
-				A68AB3422954AF9F0064CCB4 /* ErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
