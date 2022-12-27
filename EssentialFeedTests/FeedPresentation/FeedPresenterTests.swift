@@ -23,7 +23,7 @@ class FeedPresenterTests: XCTestCase {
 
     // MARK: - Helpers
     private func localized(_ key: String,
-                           file: StaticString = #file,
+                           file: StaticString = #filePath,
                            line: UInt = #line) -> String {
         let table = "Feed"
         let bundle = Bundle(for: FeedPresenter.self)
